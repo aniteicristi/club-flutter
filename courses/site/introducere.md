@@ -72,5 +72,4 @@ Folosind aceste proprietăți de tip `child`, noi putem să combinăm widget-uri
 
 Unde vedeți comentarii cu todo (// TODO: ), rezolvați problemele.
 
-[dartpad](https://dartpad.dev/?id=a3114e34db0ff9d74d2dffabdf723013 ':include :type=iframe width=100% height=800px loading="lazy"')
-
+> [Deschide editorul: ](https://dartpad.dev/?id=a3114e34db0ff9d74d2dffabdf723013b)

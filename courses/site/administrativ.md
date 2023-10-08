@@ -53,32 +53,32 @@ Aici e programul momentan
 |   DATA    | COURSE TOPICS                  |
 |-----------|--------------------------------|
 |28.09.2023 | Administrativ + Introducere    |
-|5.10.2023  | Dart I                         |
-|12.10.2023 | Dart II + OOP                  |
-|19.10.2023 | Stateless Widgets              |
-|26.10.2023 | Stateful Widgets               |
+| LIBER     | Ziua educației :(              |
+|12.10.2023 | Dart I                         |
+|19.10.2023 | Dart II + OOP                  |
+|26.10.2023 | Stateless Widgets              |
 |VACANTA    | ----                           |
-|9.11.2023  | Git basics + Instalare Flutter |
-|16.11.2023 | Create your first Flutter Project |
-|23.11.2023 | Navigare                       |
-|30.11.2023 | Sedinta Speciala               |
-|7.12.2023  | Stiluri I                      |
-|14.12.2023 | Stiluri II                     |
-|21.12.2023 | Sedinta Speciala               |
+|9.11.2023  | Stateful Widgets               |
+|16.11.2023 | Git basics + Instalare Flutter |
+|23.11.2023 | Create your first Flutter Project |
+|30.11.2023 | Navigare                       |
+|7.12.2023  | Sedinta Speciala               |
+|14.12.2023 | Stiluri I                      |
+|21.12.2023 | Stiluri II                     |
 |VACANTA    | ----                           |
 |VACANTA    | ----                           |
-|11.01.2024 | Business Logic I               |
-|18.01.2024 | Business Logic II              |
-|25.01.2024 | Sedinta Speciala               |
-|1.02.2024  | Asynchronous Programming       |
-|8.02.2024  | Persistare pe Device           |
+|11.01.2024 | Sedinta Speciala               |
+|18.01.2024 | Business Logic I               |
+|25.01.2024 | Business Logic II              |
+|1.02.2024  | Sedinta Speciala               |
+|8.02.2024  | Asynchronous Programming       |
 |VACANTA (?)| ----                           |
-|22.02.2024 | Web Requests I                 |
-|29.02.2024 | Web Requests II                |
-|7.03.2024  | Animatii                       |
-|14.03.2024 | BLoC I                         |
-|21.03.2024 | BLoC II                        |
-|28.03.2024 | BLoC III                       |
-|4.04.2024  | Sedinta Speciala               |
+|22.02.2024 | Persistare pe Device           |
+|29.02.2024 | Web Requests I                 |
+|7.03.2024  | Web Requests II                |
+|14.03.2024 | Animatii                       |
+|21.03.2024 | BLoC I                         |
+|28.03.2024 | BLoC II                        |
+|4.04.2024  | BLoC III                       |
 |11.04.2024 | Sedinta Speciala               |
 |18.04.2024 | Sedinta Speciala               |

@@ -2,13 +2,13 @@
 
 ## Ce este dart?
 
-Dart este libajul in care noi scriem aplicatiile. E de notat ca dart este diferit de Flutter. dart a aparut ca limbaj inaintea lui Flutter. Putem sa ne gandim ca daca Flutter este setul de lego, dart este design-ul distinctiv al bucatilor de lego, cum ar fi diferitele conectoare de pe fiecare piesa.
+Dart este limbajul în care noi scriem aplicațiile. E de notat că Dart este diferit de Flutter. Dart a apărut ca limbaj înaintea lui Flutter. Putem să ne gândim că dacă Flutter este setul de Lego, Dart este design-ul distinctiv al bucăților de Lego, cum ar fi diferitele conectoare de pe fiecare piesă.
 
-Atunci flutter ce este? Un framework. Adica un set de cod predefinit (scris in dart) care simplifica dezvoltarea de aplicatii mobile/web/desktop in feluri pe care le vom explora mai in detaliu in cursurile viitoare.
+Atunci Flutter ce este? Un framework. Adică un set de cod predefinit (scris în Dart) care simplifică dezvoltarea de aplicații mobile/web/desktop în feluri pe care le vom explora mai în detaliu în cursurile viitoare.
 
-Dart este un limbaj care in multe privinte este asemanator cu C++ si in multe altele este destul de diferit, însă multe concepte vor parea familiare.
+Dart este un limbaj care în multe privințe este asemănător cu C++ și în multe altele este destul de diferit, însă multe concepte vor părea familiare.
 
-Haideti sa ne uitam la cel mai simplu program in dart:
+Haidem să ne uităm la cel mai simplu program în Dart:
 
 ```dart
 void main(){
@@ -17,9 +17,9 @@ void main(){
 
 ```
 
-Observam ca la fel ca si in C++, avem o functie main. De aici se executa codul nostru in dart. Ca sa rulam nu avem nevoie sa `#include` nimic, si nici nu avem nevoie de `using namespace std;`.
+Observăm că la fel ca și în C++, avem o funcție main. De aici se execută codul nostru în Dart. Ca să rulăm, nu avem nevoie să #include nimic, și nici nu avem nevoie de using namespace std;.
 
-Pentru a scrie ceva in consola, folosim functia print. Observam ca string-urile nu sunt delimitate cu `""` (ghilimele) ci cu `''` (apostroafe). Insa ambele delimitari se accepta. Codul de jos are acelasi efect:
+Pentru a scrie ceva în consolă, folosim funcția print. Observăm că șirurile de caractere nu sunt delimitate cu "" (ghilimele), ci cu '' (apostroafe). Însă ambele delimitări se acceptă. Codul de jos are același efect:
 
 ```dart
 void main(){
@@ -27,9 +27,9 @@ void main(){
 }
 ```
 
-## Variabile in dart
+## Variabile în Dart
 
-Putem sa declaram o variabila in mai multe moduri:
+Putem să declarăm o variabilă în mai multe moduri:
 
 ```dart
 void main(){
@@ -38,17 +38,16 @@ void main(){
 }
 ```
 
-Care e diferenta?
+Care este diferența?
 
-- Variabila `a` este declarata cu key-word-ul: `var`. Acest keyword iti declara o variabila fara un tip explicit (cum ar fi int sau double). Acest tip va fi inteles de catre dart ca fiind int, pentru ca i-am atribuit 1.
-- Variabila `b` este declarata exact ca in C/C++. Nimic iesit din comun.
+- Variabila `a` este declarată cu cuvântul-cheie `var`. Acest cuvânt-cheie declară o variabilă fără un tip explicit (cum ar fi `int` sau `double`). Acest tip va fi înțeles de către Dart ca fiind `int`, pentru că i-am atribuit valoarea 1.
+- Variabila `b` este declarată exact ca în C/C++. Nimic ieșit din comun.
 
 
-## Tipuri de baza în dart
+## Tipuri de bază în Dart
 
 ### `int`
-
-La fel ca si in C++, un intreg este reprezentat prin `int`. si declarat exact ca in c++.
+La fel ca și în C++, un întreg este reprezentat prin `int` și declarat exact ca în C++.
 
 ```dart
 void main(){
@@ -56,25 +55,23 @@ void main(){
   b = 1;
   a = b + c;
 }
-
 ```
 
-Ce e important de stiut este ca intregii nu se auto-initializeaza la 0 cand sunt declarati in main. Daca de exemplu urma sa folosim a inainte sa fie atribuit, in C++ era ok si nu se supara nimeni, in dart veti fi intampinati de o eroare care spune ceva de "non nullable variable must be initialized before first use.". Fiti responsabili cu variabilele voastre!
+Ce este important de știut este că întregii nu se auto-initializează la 0 când sunt declarați în `main`. Dacă, de exemplu, urma să folosim `a` înainte să fie atribuit, în C++ era ok și nu se supăra nimeni, în Dart veți întâmpina o eroare care spune ceva de genul "non-nullable variable must be initialized before first use." Fiți responsabili cu variabilele voastre!
 
-> 💡 `int`-ul se foloseste exact ca in c++, dar daca vreti sa impartiti doua int-uri folosind operatorul `/`, rezultatul va fi mereu un `double`. Pentru împarțire cu rest, se foloseste `~/`, dar acest concept nu este foarte important.
-
+> 💡 `int`-ul se folosește exact ca în C++, dar dacă doriți să împărțiți două `int`-uri folosind operatorul `/`, rezultatul va fi mereu un `double`. Pentru împărțire cu rest, se folosește `~/`, dar acest concept nu este foarte important.
 
 ### `float/double`
 
-Tot ca in C++, numerele reale (cu virgula flotanta) sunt reprezentate de `float` si `double`. Cu precadere `double` este folosit mai des, dar tot ce poti face cu unul poti face si cu celalalt, dar double suporta numere mai mari.
+La fel ca în C++, numerele reale (cu virgulă mobilă) sunt reprezentate de `float` și `double`. Cu precădere, `double` este folosit mai des, dar tot ce poți face cu unul poți face și cu celălalt, dar `double` suportă numere mai mari.
 
 ### `bool`
 
-Tot ca in C++. Are doua variante posibile: true sau false. Doar ca diferit de C++, `false` nu este egal cu `0`. Este incorect sa compari un numar cu un bool.
+La fel ca în C++. Are două valori posibile: `true` sau `false`. Doar că diferit de C++, `false` nu este egal cu `0`. Este incorect să compari un număr cu un boolean.
 
 ### `String`
 
-Unul dintre cele mai importante tipuri in dart, string reprezinta un sir de caractere. Acest concept exista in C++ dar s-ar putea sa nu il cunoasteti. Ideea e ca in loc ca un sir de caractere sa fie tratat ca un sir de `char`, acesta este tratat ca o variabila de sine statatoare care poate fi atribuita, modificată, etc...
+Unul dintre cele mai importante tipuri în Dart, string reprezintă un șir de caractere. Acest concept există în C++, dar s-ar putea să nu îl cunoașteți. Ideea este că în loc ca un șir de caractere să fie tratat ca un șir de `char`, acesta este tratat ca o variabilă de sine stătătoare care poate fi atribuită, modificată, etc...
 
 ```dart
 void main() {
@@ -83,13 +80,13 @@ void main() {
   hello = "goodbye";
 
   hello = hello + ", cruel world!";
-  print(hello); //Prints: "goodbye, cruel world!"
+  print(hello); // Afișează: "goodbye, cruel world!"
 }
-
 ```
-Ce este interesant e ca in loc sa folosim functii precum strcat ca sa concatenam doua string-uri, putem doar sa folosim operatorul `+`. Cat de simplu!
 
-Daca intamplator adaugati un punct dupa variabila string, veti fi intampinati cu o multitudine de metode pe care le puteti aplica. Cel mai simplu ar fi sa vedem cum luam lungimea unui string.
+Ce este interesant este că în loc să folosim funcții precum `strcat` ca să concatenăm două șiruri de caractere, putem doar să folosim operatorul `+`. Cât de simplu!
+
+Dacă întâmplător adăugați un punct după variabila string, veți fi întâmpinați cu o multitudine de metode pe care le puteți aplica. Cel mai simplu ar fi să vedem cum luăm lungimea unui string.
 
 ```dart
 void main() {
@@ -99,17 +96,15 @@ void main() {
   print(hello.length); // Prints: 12
 }
 ```
+În acest caz, `length` este un atribut al șirului de caractere.
 
-In acest caz `length` este un atribut al string-ului. 
+Nu are neapărat rost să intrăm în toate aceste atribute, dar puteți să vedeți ce altceva puteți face cu un șir de caractere dacă vă uitați la acest tutorial: [link](https://api.flutter.dev/flutter/dart-core/String-class.html).
 
-Nu are neaparat rost sa intram in toate aceste atribute, dar puteti sa vedeti ce altceva puteti face cu un string daca va uitati la acest tutorial: [link](https://api.flutter.dev/flutter/dart-core/String-class.html).
+Desigur, dacă doriți să selectați fiecare caracter dintr-un șir de caractere, puteți să folosiți o sintaxă similară cu accesarea unui element dintr-un șir, dar acest lucru nu va fi atât de folosit când vom folosi Flutter.
 
-Desigur, daca doriti sa selectati fiecare caracter dintr-un string, puteti sa folositi o sintaxa similara cu accesarea unui element dintr-un sir, dar acest lucru nu va fi atat de folosit cand vom folosi Flutter.
+Un alt concept extraordinar de folositor în Dart este interpolarea de șiruri de caractere. Interpolare? Hă?
 
-
-Un alt concept extraordinar de folositor in dart este interpolarea de string-uri. Interpolare? Hă?
-
-Imaginați-va ca vreti sa afisati un text de genul: "Ana are 5 mere si 8 portocale." Dar, ati vrea sa afisati acest text in functie de valoarea unor variabile din codul vostru. In C++ ati face ceva de genul asta:
+Imaginați-vă că doriți să afișați un text de genul: "Ana are 5 mere și 8 portocale." Dar, ați vrea să afișați acest text în funcție de valoarea unor variabile din codul vostru. În C++, ați face ceva de genul acesta:
 
 ```C++
 int mere = 5;
@@ -117,7 +112,7 @@ int portocale = 8;
 cout << "Ana are " << mere << " mere si " << portocale << " portocale.\n"
 ```
 
-In dart nu avem `cout`. Dar avem functia print care ne printeaza un string si am putea sa ne folosim de ideea de concatenare a string-urilor:
+În Dart nu avem `cout`, dar avem funcția `print` care ne afișează un șir de caractere și am putea să ne folosim de ideea de concatenare a șirurilor de caractere:
 
 ```dart
 int mere = 5;
@@ -126,7 +121,7 @@ String mesaj = "Ana are " + mere + " mere si " + portocale + " portocale.\n"; //
 print(mesaj);
 ```
 
-Acest cod va da eroare. De ce? `mere` este un `int` deci nu poate fi concatenat cu un `String`. Putem sa rezolvam aceasta problema folosind functia toString() care e apelata pe `int`-uri
+Acest cod va da eroare. De ce? `mere` este un `int`, deci nu poate fi concatenat cu un `String`. Putem să rezolvăm această problemă folosind funcția `toString()`, care este apelată pe `int`-uri.
 
 ```dart
 int mere = 5;
@@ -135,11 +130,11 @@ String mesaj = "Ana are " + mere.toString() + " mere si " + portocale.toString()
 print(mesaj); // Prints: Ana are 5 mere si 8 portocale.
 ```
 
-Ati obosit de la atatea probleme? Eu da. Nu vreau sa fac asta de fiecare data cand vreau sa creez un string dinamic. Noroc ca dezvoltatorii dart s-au gandit la acest aspect si au decretat: 
+Ați obosit de la atâtea probleme? Eu da. Nu vreau să fac asta de fiecare dată când vreau să creez un șir de caractere dinamic. Noroc că dezvoltatorii Dart s-au gândit la acest aspect și au decretat:
 
-> "Thou shall use string interpolation!"
+'Thou shall use string interpolation!'
 
-Interpolarea string-urilor consta in a îmbrica variabile direct in text-ul string-ului in urmatorul mod:
+Interpolarea șirurilor de caractere constă în a îmbrăca variabile direct în textul șirului de caractere în următorul mod:
 
 
 ```dart
@@ -149,9 +144,9 @@ String mesaj = "Ana are ${mere} mere si ${portocale} portocale.\n";
 print(mesaj); // Prints: Ana are 5 mere si 8 portocale.
 ```
 
-Daca scriem `${}` in string, inauntru putem sa scriem orice variabila intre acolade. si acea variabila va fi convertita direct in string. Fara sudoare si chiar mai flexibil decat `cout` pentru ca acum putem sa folosim in continuare acel mesaj construit.
+"Dacă scriem `${}` într-un șir de caractere, înăuntru putem să scriem orice variabilă între acolade, iar acea variabilă va fi convertită direct într-un șir de caractere. Fără sudoare și chiar mai flexibil decât `cout`, pentru că acum putem să folosim în continuare acel mesaj construit.
 
-Ba chiar, inauntrul acelor acolade putem sa punem orice linie de cod care ne intoarce o valoare, deci poate cineva inspirat ar dori sa faca ceva de genul:
+Ba chiar, înăuntrul acelor acolade putem să punem orice linie de cod care ne întoarce o valoare, deci poate cineva inspirat ar dori să facă ceva de genul:"
 
 ```dart
 int mere = 5;
@@ -160,13 +155,13 @@ String mesaj = "Ana are ${mere} mere si ${portocale} portocale. Are in total ${m
 print(mesaj); // Prints: Ana are 5 mere si 8 portocale. Are in total 14 fructe!
 ```
 
-> 💡 Observati cum la finalul fiecarui string am folosit `\n`. endl din C++ nu exista in dart. In schimb, folosim caracterul de pagina noua `\n`. (care exista si in C/C++ 😉)
+> 💡 Observați cum la finalul fiecărui șir de caractere am folosit `\n`. `endl` din C++ nu există în Dart. În schimb, folosim caracterul pentru pagină nouă `\n` (care există și în C/C++ 😉).
 
 ### `List`
 
-Listele sunt echivalentul sirurilor in dart, dar sunt unpic diferite fata de siruri. Diferentele nu sunt vizibile in mare parte pentru programatori, dar poate cei care au mai fost la olimpiada pot sa imi spuna diferenta dintre un sir si o lista inlantuita. Ideea e ca listele in dart se comporta ca si siruri, dar sunt defapt liste inlantuite. Nu conteaza asa de mult daca nu ne gandim la performanta aplicatiei noastre. Imaginati-va ca sunt siruri.
+Listele sunt echivalentul șirurilor în Dart, dar sunt un pic diferite față de șiruri. Diferențele nu sunt vizibile în mare parte pentru programatori, dar poate cei care au mai fost la olimpiadă pot să-mi spună diferența dintre un șir și o listă înlănțuită. Ideea este că listele în Dart se comportă ca și șiruri, dar sunt de fapt liste înlănțuite. Nu contează atât de mult dacă nu ne gândim la performanța aplicației noastre. Imaginați-vă că sunt șiruri de caractere.
 
-Ce este interesant aici este ca pentru a declara o lista, trebuie sa specificam si tipul de variabila care se afla in aceasta lista:
+Ce este interesant aici este că pentru a declara o listă, trebuie să specificăm și tipul de variabilă care se află în acea listă în felul urmator:
 
 ```dart
 void main() {
@@ -178,11 +173,11 @@ void main() {
 }
 ```
 
-Observam ca atunci cand vorbim de liste, de obicei elementele unei liste sunt specificate intre paranteze drepte `[]` si sunt separate prin virgula.
+Observăm că atunci când vorbim de liste, de obicei elementele unei liste sunt specificate între paranteze drepte `[]` și sunt separate prin virgulă.
 
-Ce e diferit de C++ este ca nu trebuie sa specificam o lungime maxima pentru lista, dar daca incercam sa accesam un element de la o pozitie care nu exista atunci ne va plange programul cu o eroare de indexare.
+Ceea ce este diferit față de C++ este că nu trebuie să specificăm o lungime maximă pentru listă, dar dacă încercăm să accesăm un element de la o poziție care nu există, atunci programul va genera o eroare de indexare.
 
-Ok, atunci cum as initializa o lista de sa zicem 100 de String-uri?? Trei metode:
+Bun, atunci cum aș inițializa o listă de, să zicem, 100 de șiruri de caractere? Există trei metode:
 
 ```dart
 List<int> nume = [
@@ -210,13 +205,13 @@ for(int i = 0; i < 100; i++){
 
 ```
 
-Ok, am ajuns la partea de "si in multe altele este destul de diferit de C++".
+Ok, am ajuns la partea de 'și în multe altele este destul de diferit de C++'.
 
-- In prima metoda, putem sa declaram fiecare element explicit. Desi suna ca o metoda foarte proasta de a creeaa o lista de 100 de elemente (si este...) in programarea de zi cu zi in flutter, aceasta metoda de a creea o lista este cea mai des folosita. Imaginati-va un `Row()` care are ca si `children` o lista de `Widget`-uri. Nu o sa aiba 100 de copii, ci probabil cam 10 in general, in functie de cat de complicata este interfata noastra.
-- In a doua metoda, putem sa folosim o functie speciala numita `List.filled()` (care se numeste constructor, dar vom vedea ce inseamna asta mai tarziu) si care ia ca parametrii lungimea listei si un element "default" cu care sa umple lista. Parametrul growable este mentionat in caz ca vrem sa mai adaugam elemente la lista sau nu mai tarziu.
-- In a treia metoda, incepem de la o lista goala, declarata cu paranteze patrate: `[]` si, folosind un for foarte familiar, pur si simplu adaugam string-ul `""` la coada listei de 100 de ori.
+- În prima metodă, putem să declarăm fiecare element explicit. Deși sună ca o metodă foarte proastă de a crea o listă de 100 de elemente (și este...), în programarea de zi cu zi în Flutter, această metodă de a crea o listă este cea mai des folosită. Imaginați-vă un `Row()` care are ca și `children` o listă de `Widget`-uri. Nu o să aibă 100 de copii, ci probabil cam 10 în general, în funcție de cât de complicată este interfața noastră.
+- În a doua metodă, putem să folosim o funcție specială numită `List.filled()` (care se numește constructor, dar vom vedea ce înseamnă asta mai târziu) și care ia ca parametri lungimea listei și un element "implicit" cu care să umple lista. Parametrul `growable` este menționat în caz că vrem să mai adăugăm elemente la listă sau nu mai târziu.
+- În a treia metodă, începem de la o listă goală, declarată cu paranteze pătrate: `[]`, și, folosind un `for` foarte familiar, pur și simplu adăugăm șirul de caractere `""` la coada listei de 100 de ori.
 
-Aici s-ar putea sa existe mai multe confuzii, dar in orice caz, aceste liste se comporta asemanator cu sirurile din C++. Hai sa incercam sa parcurgem o lista si sa afisam elementele ei:
+Aici s-ar putea să existe mai multe confuzii, dar în orice caz, aceste liste se comportă asemănător cu șirurile de caractere din C++. Hai să încercăm să parcurgem o listă și să afișăm elementele ei:
 
 ```dart
 void main() {
@@ -227,17 +222,17 @@ void main() {
   }
 }
 ```
+Acest mod de parcurgere ar trebui să vă pară familiar. Cu toate acestea, acest mod de parcurgere are câteva dezavantaje:
 
-Acest mod de parcurgere ar trebui sa va para similar. Cu toate acestea, acest mod de parcurgere are cateva dezavantaje:
+- Trebuie să folosim acel index `i` ca să adresăm fiecare element în parte.
+- Trebuie să apelăm `.length` ca să găsim lungimea listei.
+- Nu este ușor de urmărit / lizibil.
 
-- Trebuie sa folosim acel index i ca sa adresam fiecare element in parte.
-- Trebuie sa apelam .length ca sa gasim lungimea listei.
-- Nu e usor de urmarit / lizibil.
+Desigur, dacă avem nevoie de acel index, atunci este mai avantajos să parcurgem în felul acesta. În plus, în C, nu putem să facem ceva mai bun.
 
-Desigur, daca avem nevoie de acel index, atunci este mai avantajos sa parcurgem in felul acesta. Iar daca suntem in C, nu putem sa facem ceva mai bun
-> in C++ avem for(auto x:lista) dar probabil majoritatea nu stiti exact despre ce vorbesc...
+> În C++ avem `for(auto x : lista)`, dar probabil majoritatea nu știți exact despre ce vorbesc...
 
-In dart putem mai bine:
+În Dart putem face mai bine:
 
 ```dart
 void main() {
@@ -249,11 +244,11 @@ void main() {
 }
 ```
 
-In modul de mai sus, putem sa parcurgem lista folosind variabila numar. Este foarte usor de citit. Codul iti spune exact ce face: "Pentru fiecare numar in numere, fa ce e aici in paranteze." Este un mod mai bun iar acest lucru se va arata mai incolo.
+În modul de mai sus, putem să parcurgem lista folosind variabila `numar`. Este foarte ușor de citit. Codul îți spune exact ce face: "Pentru fiecare `numar` în `numere`, fă ce este aici în paranteze." Este un mod mai bun, iar acest lucru se va arăta mai încolo.
 
 ## Condiții și Bucle
 
-Conditiile și buclele functioneaza exact ca in C/C++.
+Condițiile și buclele funcționează exact ca în C/C++.
 
 ```dart
 void main() {
@@ -280,12 +275,11 @@ void main(){
 }
 ```
 
-> 💡 Observati ca in general cand scriu cod, pun acolada fix dupa conditie/instructiune/functie. Asta este stilul prestabilit in dart. Poate sa fie ciudat la inceput, dar va salveaza o gramada de spatiu pe ecran.
-
+> 💡 Observați că în general, când scriu cod, pun acolada fix după condiție/instrucțiune/funcție. Acesta este stilul prestabilit în Dart. Poate să fie ciudat la început, dar vă economisește o grămadă de spațiu pe ecran.
 
 ## Funcții
 
-Ca sa declaram si sa folosim functii in dart, facem lucruri foarte similare cu C/C++. Pana la urma am facut asta de mai multe ori cu functia main. Hai sa ne uitam la un exemplu:
+Pentru a declara și a folosi funcții în Dart, facem lucruri foarte similare cu C/C++. Până la urmă, am făcut asta de mai multe ori cu funcția `main`. Hai să ne uităm la un exemplu:
 
 ```dart
 int prim(int numar) {
@@ -302,7 +296,7 @@ void main(){
 }
 ```
 
-Cu toate acestea, exista niste mari diferente. In dart functiile pot lua parametri dupa nume. De exemplu, o functie definita in felul acesta:
+Cu toate acestea, există niște mari diferențe. În Dart, funcțiile pot lua parametri după nume. De exemplu, o funcție definită în felul acesta:
 
 ```dart
 void foo(int a, {int? b, int? c}) {
@@ -319,9 +313,9 @@ void main() {
 ```
 ![confused](img/confused.jpg)
 
-Daca inconjuram niste parametrii in acolade in header-ul functiei, acei parametrii devin optionali si trebuie numiti atunci cand trebuie pasati la apel.
+Dacă înconjurăm niște parametri în acolade în antetul funcției, acei parametri devin opționali și trebuie numiți atunci când sunt pasați la apel.
 
-Tipul unui parametru optional trebuie sa aiba ? la final, cum ar fi `int?`. Daca acel parametru nu e pasat, atunci in cadrul functiei parametrul va fi `null`. 
+Tipul unui parametru opțional trebuie să aibă `?` la final, cum ar fi `int?`. Dacă acel parametru nu este pasat, atunci în cadrul funcției parametrul va fi `null`.
 
 ```dart
 void foo(int a, {int? b, int? c}) {
@@ -334,15 +328,15 @@ void main(){
 }
 ```
 
-Daca totusi vrei sa fie un parametru numit si sa nu fie optional (sau cum se refera in documentatia oficiala: `nullable`) putem sa folosim key-word-ul `required` cand declaram parametrul din functie. In felul acesta, dart ne va avertiza inainte sa rulam ca trebuie sa dam o valoare parametrilor b si c.
+Dacă totuși vrei să fie un parametru numit și să nu fie optional (sau cum se referă în documentația oficială: "nullable"), putem să folosim cuvântul cheie "required" când declarăm parametrul din funcție. În felul acesta, Dart ne va avertiza înainte să rulăm că trebuie să dăm o valoare parametrilor "b" și "c".
 
 ```dart
-void foo(int a, {required int b,required int c}) {
+void foo(int a, {required int b, required int c}) {
   print(b);
 }
 ```
 
-`Nullable` este un concept mai avanasat, de care nu are rost sa ne legam. Ideea e ca tu poti sa declari o variabila `nullable` si inafara header-ului unei functii, iar acea variabila ori va fi o variabila de tipul declarat, ori null. Te ajuta sa stii exact daca ai o informatie in aceea variabila sau daca nu.
+Conceptul de "nullable" este mai avansat și nu are rost să ne legăm de el aici. Ideea este că poți să declari o variabilă "nullable" în afara antetului unei funcții, iar acea variabilă fie va fi de tipul declarat, fie null. Te ajută să știi exact dacă ai o informație în acea variabilă sau nu.
 
 ```dart
 void main() {
@@ -359,7 +353,7 @@ void main() {
 
 Ok, let me explain:
 
-In dart, functiile pot fi declarate in mod static dupa cum sunt declarate si in C/C++, dar pot fi declarate si dinamic. Functiile dinamice sunt declarate pe loc direct in codul nostru. Aceste functii dinamice pot fi atribuite la o variabila, iar acea variabila va avea tipul de `Function`. Aceste variabile dupa pot sa se apeleze pe sine folosind functia `.call()`.
+În Dart, funcțiile pot fi declarate în mod static așa cum sunt în C/C++, dar pot fi declarate și dinamice. Funcțiile dinamice sunt declarate pe loc direct în codul nostru. Aceste funcții dinamice pot fi atribuite unei variabile, iar acea variabilă va avea tipul `Function`. După aceea, aceste variabile pot fi apelate ca funcții folosind metoda `.call()`.
 
 ```dart
 void main() {
@@ -371,7 +365,7 @@ void main() {
 }
 ```
 
-In acest exemplu, am declarat o functie dinamica si am atribuit-o variabilei doSomething. Observam ca sa creem o functie dinamica e ca si cum am scoate tipul de intoarcere si numele unei functii normale si ne raman doar parametrii sa ii definim. In cazul de sus, nu avem parametrii, dar functiile dinamice pot avea parametrii la fel ca si cele statice.
+În acest exemplu, am declarat o funcție dinamică și am atribuit-o variabilei `doSomething`. Observăm că pentru a crea o funcție dinamică este ca și cum am scoate tipul de întoarcere și numele unei funcții normale și ne rămân doar parametrii să-i definim. În cazul de sus, nu avem parametrii, dar funcțiile dinamice pot avea parametrii la fel ca cele statice.
 
 ```dart
 void main() {
@@ -383,9 +377,9 @@ void main() {
 }
 ```
 
-Observati cum atunci cand functia dinamica primeste parametrii, acestia apar ca si parametrii metodei `.call()`.
+Observați cum atunci când funcția dinamică primește parametrii, aceștia apar ca și parametrii metodei `.call()`.
 
-Acest concept este de ajutor atunci cand vrem sa specificam un anumit comportament cand un eveniment se intampla intr-o aplicatie. De exemplu o sa lucram cu butoane, am dori ca acel buton sa faca ceva atunci cand il apasam. Atunci am defini butonul in felul urmator:
+Acest concept este de ajutor atunci când vrem să specificăm un anumit comportament când un eveniment are loc într-o aplicație. De exemplu, vom lucra cu butoane și dorim ca acel buton să facă ceva atunci când este apăsat. Atunci am defini butonul în felul următor:
 
 ```dart
 ElevatedButton(
@@ -396,8 +390,14 @@ ElevatedButton(
 )
 ```
 
-[dartpad](https://dartpad.dev/?id=3594da47b00c383e29b94b716ffd956e ':include :type=iframe width=100% height=800px loading="lazy"')
+> [Deschide editorul: ](https://dartpad.dev/?id=3594da47b00c383e29b94b716ffd956e)
 
+Observați că și atunci când creați widget-uri, modul în care specificați atributele unui widget este similar cu modul în care pasați parametrii către o funcție.
 
-Puteti sa observati ca si atunci cand creati Widget-uri, felul in care se specifica atributele unui widget este similar cu felul in care se paseaza parametrii la o functie.
+## Exerciții:
 
+### Clasicul foo bar:
+
+### Numero Numero
+
+### Mă mai gândesc
