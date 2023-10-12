@@ -84,3 +84,11 @@ Partea cea mai faina este ca noi putem sa aplicam modul asta de gandire in multe
 Putem nici sa nu vorbim despre pisici. Putem sa modelam lucruri abstracte dupa ideeile astea, cum ar fi: ✨ ***Widgets!*** ✨
 
 Daca stai sa te gandesti, si widgeturile sunt niste clase abstracte care au un comportament comun, si anume toate trebuie sa randeze `ceva?` pe ecran, folosind functia build.
+
+Ei bine, la fel cum toate animalele scot un sunet, la fel si toate widget-urile au o functie numita build. In aceasta functie, noi putem sa descriem felul in care se poate construi interfata noastra. 
+
+Aceasta functie `Widget build(BuildContext context)` este moștenita de la parintele `StatelessWidget`, in felul urmator:
+
+<!-- Introdu cum se delcara un widget -->
+
+Deja am mai fost pe aici in cursul trecut prin exemple. Observam ca avem clasa noastra de widget, care mosteneste `StatelessWidget`. 
