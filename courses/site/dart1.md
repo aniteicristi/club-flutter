@@ -398,6 +398,8 @@ Observați că și atunci când creați widget-uri, modul în care specificați 
 
 ### Clasicul foo bar:
 
+> [Deschide editorul: ](https://dartpad.dev/?id=8ea350377714efcd8efd8bdf7c1ecf56)
+
 ### Numero Numero
 
-### Mă mai gândesc
+> [Deschide editorul: ](https://dartpad.dev/?id=cb2eb48afc71152cb79e350389c654cf)

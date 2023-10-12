@@ -2,7 +2,7 @@
 
 ## Unde, când?
 
-- **Ora:** 17:00
+- **Ora:** 16:30
 - **Ziua:** În fiecare joi
 - **Locația:** Liceul Teoretic "Lucian Blaga", Laboratorul de informatică "Istorie", Etajul 3, capăt.
 
