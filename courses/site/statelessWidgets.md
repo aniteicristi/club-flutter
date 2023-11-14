@@ -1,6 +1,6 @@
 # Widget-uri. Componenta de baza
 
-Dupa cum discutasem si in celelalte cursuri, widget-uirle sunt componentele de baza, piesele de lego elementare pe care le putem folosi ca sa ne creem aplicatii. In continuare ne vom uitaa la cea mai simpla aplicatie in flutter si ce contine:
+După cum discutaserăm și în celelalte cursuri, widget-urile sunt componentele de bază, piesele de lego elementare pe care le putem folosi ca să ne creăm aplicații. În continuare, ne vom uita la cea mai simplă aplicație în Flutter și ce conține:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -24,21 +24,21 @@ class App extends StatelessWidget {
 
 ```
 
-> ✨ Codul este disponibil pe dart-pad sa urmariti impreuna cu mine [aici](https://dartpad.dev/?id=d28b14883cff40309477b723ed1fa9f7)
+> ✨ Codul este disponibil pe dart-pad să urmăriți împreună cu mine [aici](https://dartpad.dev/?id=d28b14883cff40309477b723ed1fa9f7)
 
-Observam ca aplicatia noastra este ea in sine un widget `App` care are o functie build unde ne desfasuram interfata.
+Observăm că aplicația noastră este ea în sine un widget `App` care are o funcție build unde ne desfășurăm interfața.
 
-Primul widget pe care il vedem este MaterialApp. Acest widget reprezeinta aplicatia noastra propriuzisa, iar despre functionalitatile lui vom studia atunci cand invatam despre navigare. Ideea este ca fiecare widget pe care il folosim trebuie sa vina in `MaterialApp()`.
+Primul widget pe care îl vedem este `MaterialApp`. Acest widget reprezintă aplicația noastră propriu-zisă, iar despre funcționalitățile lui vom studia atunci când învățăm despre navigare. Ideea este că fiecare widget pe care îl folosim trebuie să vină în `MaterialApp()`.
 
-All doilea widget din nou nu e cunoscut, dar observam ca e pasat la `MaterialApp()` prin parametrul `home` foarte similar de felul in care pasam parametrii numiti la functii. Acest widget se numeste `Scaffold()`. Un scaffold reprezinta o pagina pe care o vedem in aplicatie. Prin pagina ne referim la un background asupra caruia putem sa punem alte widget-uri, cum ar fi acel `Text()`. 
+Al doilea widget, deși nu e cunoscut, este pasat la `MaterialApp()` prin parametrul `home`, foarte similar cu modul în care pasăm parametri numiți la funcții. Acest widget se numește `Scaffold()`. Un scaffold reprezintă o pagină pe care o vedem în aplicație. Prin pagină ne referim la un background asupra căruia putem să punem alte widget-uri, cum ar fi acel `Text()`.
 
-Ok, dar ne trebuie si o aplicatie, si o pagina??? De ce trebuie sa folosim atatea ca sa afisam un simplu text pe ecran?
+Ok, dar ne trebuie și o aplicație, și o pagină??? De ce trebuie să folosim atâtea pentru a afișa un simplu text pe ecran?
 
-Pai, putem sa ne gandim la urmatorul lucru: O aplicatie poate sa aiba mai multe pagini. De exemplu cand stai pe instagram, ai lista de mesaje si cand dai click pe un mesaj te duce pe alta unde poti sa povestesti cu prietenii tai. Conceptul acesta de pagina este de baza cand vine vorba de aplicatii de mobil, si vom vedea mai multe despre el mai tarziu.
+Pai, putem să ne gândim la următorul lucru: O aplicație poate să aibă mai multe pagini. De exemplu, când stai pe Instagram, ai lista de mesaje și când dai click pe un mesaj te duce pe altă pagină unde poți să povestești cu prietenii tăi. Conceptul acesta de pagină este de bază când vine vorba de aplicații de mobil, și vom vedea mai multe despre el mai târziu.
 
-Observam ca `Scaffold()` nu are un `child`, ci un `body`. Daca ati mai facut o pagina web, poate va mai amintiti ca un html are doua taguri de baza, head si body. Well, si in flutter este similar, chiar daca doar in nume.
+Observăm că `Scaffold()` nu are un `child`, ci un `body`. Dacă ați mai făcut o pagină web, poate vă mai amintiți că un HTML are două taguri de bază, `head` și `body`. Ei bine, și în Flutter este similar, chiar dacă doar în nume.
 
-In acest caz simplist, noi afisam un text. Dar noi vrem aplicatii mai complexe de atat, care au mai multe elemente. Cu toate acestea, body ia un singur parametru. Ce ne facem?
+În acest caz simplist, noi afișăm un text. Dar noi vrem aplicații mai complexe de atât, care au mai multe elemente. Cu toate acestea, `body` ia un singur parametru. Ce ne facem?
 
 ## Column, Row și Stack
 
@@ -71,9 +71,9 @@ class App extends StatelessWidget {
 }
 
 ```
-Observam ca avem mai mult content, care este situat intr-o coloana pe ecranul nostru. Widget-ul `Column()` va lua ca argumente in `children` o lista de widget-uri specificate de noi. 
+Observăm că avem mai mult conținut, care este situat într-o coloană pe ecranul nostru. Widget-ul `Column()` va lua ca argumente în `children` o listă de widget-uri specificate de noi.
 
-Desigur, am putea sa schimbam in loc de coloana sa fie rand si atunci elementele ar fi situate pe orizontala. Partea faina este ca noi putem sa punem orice widget in lista aceea de elemente, inclusiv un alt widget de tip `Column()`. Desigur, daca folosim doua coloane una in alta, nu facem nimic. O aplicatie mai comuna a acestui concept este sa punem un rand in coloana, ca sa avem mai multe elemente la finalul listei ordonate pe orizontala unul dupa altul:
+Desigur, am putea să schimbăm în loc de coloană să fie un rând și atunci elementele ar fi situate pe orizontală. Partea faină este că noi putem să punem orice widget în lista aceea de elemente, inclusiv un alt widget de tip `Column()`. Desigur, dacă folosim două coloane una în alta, nu facem nimic. O aplicație mai comună a acestui concept este să punem un rând în coloană, ca să avem mai multe elemente la finalul listei ordonate pe orizontală unul după altul:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -110,23 +110,23 @@ class App extends StatelessWidget {
 
 ```
 
-Hopa... un nou widget a intrat in cladire. Putem sa folosim widget-ul `Icon()` ca sa reprezentam o iconitia sugestiva. Primul argument al acestui widget este o vaoloare de tipul `IconData` care este defapt doar o colectie de diferite iconite pe care le putem folosi in aplicatiile noastre. Daca intrati pe [api.flutter.dev](https://api.flutter.dev/flutter/material/Icons-class.html) veti vedea o lista completa cu toate iconitele pe care le puteti folosi in aplicatiile voastre flutter. Daca aveti nevoie de iconite noi, acela pot fi create si importante in aplicatie.
+Hopa... un nou widget a intrat în clădire. Putem să folosim widget-ul `Icon()` ca să reprezentăm o iconiță sugestivă. Primul argument al acestui widget este o valoare de tipul `IconData`, care este de fapt doar o colecție de diferite iconițe pe care le putem folosi în aplicațiile noastre. Dacă intrați pe [api.flutter.dev](https://api.flutter.dev/flutter/material/Icons-class.html), veți vedea o listă completă cu toate iconițele pe care le puteți folosi în aplicațiile voastre Flutter. Dacă aveți nevoie de iconițe noi, acelea pot fi create și importate în aplicație.
 
-Observam ca de cand am introdus randul, textul nostru este centrat pe pagina. De ce? In comportamentul default al `Column()` si `Row()` este sa se extinda pana cand nu mai pot pe axa lor principala (verticala pentru coloana si orizontala pentru rand). Cand era doar o coloana, aceasta se extindea pe toata aplicatia pana jos, dar pe axa transversala (cross axis) se extindea doar ca sa incapa textul. O data ce am introdus un rand, acesta a dorit sa se extinda pana la capat pe axa orizontala, iar impreuna cu el a tras textul la mijloc, deoarece coloana isi alineaza textul la mijloc ca comportament standard. Putem sa schimbam orientarea prin a ne juca cu `mainAxisAlignment` si `crossAxisAlignment`.
+Observăm că de când am introdus rândul, textul nostru este centrat pe pagină. De ce? În comportamentul implicit al `Column()` și `Row()`, este să se extindă până când nu mai pot pe axa lor principală (verticală pentru coloană și orizontală pentru rând). Când era doar o coloană, aceasta se extindea pe toată aplicația până jos, dar pe axa transversală (cross axis) se extindea doar ca să încapă textul. Odată ce am introdus un rând, acesta a dorit să se extindă până la capăt pe axa orizontală, iar împreună cu el a tras textul la mijloc, deoarece coloana își aliniază textul la mijloc ca comportament standard. Putem să schimbăm orientarea prin a ne juca cu `mainAxisAlignment` și `crossAxisAlignment`.
 
-`Stack()` functioneaza similar cu row si column, doar ca isi pune elementele unul peste altul in interfata.
+`Stack()` funcționează similar cu row și column, doar că își pune elementele unul peste altul în interfață.
 
-## Spatiere: Padding, Spacer
+## Spațiere: Padding, Spacer
 
-Alte trei widgeturi super importante cand vrem sa creem unpic de spatiere sunt cele mentionate in titlu.
+Alte două widget-uri super importante când vrem să creăm un pic de spațiu sunt cele menționate în titlu.
 
-`Padding()` este un widget care o data ce este inconjurat in jurul altui widget, va crea o spatiere in jurul lui in cele 4 directii: `top`, `bottom`, `left` si `right`. Aceasta spatiere este specificata folosind clasa de `EdgeInsets`, care specifica distanta in pixeli in fiecare directie. EdgeInsets are mai multe forme:
+`Padding()` este un widget care, odată ce este înconjurat în jurul altui widget, va crea un spațiu în jurul lui în cele 4 direcții: `top`, `bottom`, `left` și `right`. Acest spațiu este specificat folosind clasa `EdgeInsets`, care specifică distanța în pixeli în fiecare direcție. `EdgeInsets` are mai multe forme:
 
-- `EdgeInsets.all(5.0)` - Adauga o spatiere de 5 pixeli in toate directiile.
-- `EdgeInsets.symmetric(horizontal: 5, vertical: 2)` - Adauga o spatiere egala pe cele doua axe: sus si jos de 2 pixeli, dreapta si stanga de 5 pixeli.
-- `EdgeInsets.only(left: 3, right:4, top:1)` - Adauga o spatiere specificata in fiecare directie in jurul widget-ului. daca nu e specificata pentru o directie, se asuma 0.
+- `EdgeInsets.all(5.0)` - Adaugă un spațiu de 5 pixeli în toate direcțiile.
+- `EdgeInsets.symmetric(horizontal: 5, vertical: 2)` - Adaugă un spațiu egal pe cele două axe: sus și jos de 2 pixeli, dreapta și stânga de 5 pixeli.
+- `EdgeInsets.only(left: 3, right: 4, top: 1)` - Adaugă un spațiu specificat în fiecare direcție în jurul widget-ului. Dacă nu este specificat pentru o direcție, se asumă 0.
 
-Haideti sa adaugam un padding la titlu:
+Haideți să adăugăm un padding la titlu:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -166,10 +166,11 @@ class App extends StatelessWidget {
 }
 ```
 
-Observam ca acum exista o distanta intre titlu si subtitlu. Acest widget e foarte folosit, deoarece cand ai de exemplu postari intr-o lista, trebuie sa pui o distanta intre acestea ca sa nu arate straniu.
+Observăm că acum există o distanță între titlu și subtitlu. Acest widget este foarte folosit, deoarece când ai, de exemplu, postări într-o listă, trebuie să pui o distanță între acestea ca să nu arate ciudat.
 
+<!-- introduce an example with padding vs without padding-->
 
-Bun, dar daca am vrea ca acele iconite sa fie in josul paginii? In acest caz putem folosi un `Spacer()` care odata pus intr-o coloana sau un rand, va impinge toate elementele din inaintea lui intr-o parte, si celelalte in cealalta. Puteti sa va ganditi la el ca la un arc care e pus intre un rand de carti. Arcul se va extinde cat de tare poate pana cand cartile vor fi lipite una de alta si de perete.
+Bun, dar dacă am vrea ca acele iconițe să fie în josul paginii? În acest caz, putem folosi un `Spacer()` care odată pus într-o coloană sau un rând, va împinge toate elementele dinaintea lui într-o parte, și celelalte în cealaltă. Puteți să vă gândiți la el ca la un arc care este pus între un rând de cărți. Arcul se va extinde cât de tare poate până când cărțile vor fi lipite una de alta și de perete.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -210,11 +211,11 @@ class App extends StatelessWidget {
 }
 ```
 
-## Containere si Card-uri.
+## Containere și Card-uri.
 
-Bun, sa spunem ca am vrea totusi in aplicatia noastra sa avem un patrat portocaliu. Ca sa creem un patrat putem sa ne folosim de un container. `Container()` este un widget care deseneaza un patrat pe interfata. Desigur, acest patrat poate sa fie si rotunjit pana arata ca un cerc, dar asta este peste ce vrem sa facem astazi.
+Bun, să spunem că am vrea totuși în aplicația noastră să avem un pătrat portocaliu. Ca să creăm un pătrat, putem să ne folosim de un container. `Container()` este un widget care desenează un pătrat pe interfață. Desigur, acest pătrat poate să fie și rotunjit până arată ca un cerc, dar asta este peste ce vrem să facem astăzi.
 
-Haideti sa ne uitam peste urmatorul exemplu:
+Haideți să ne uităm peste următorul exemplu:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -256,13 +257,13 @@ class App extends StatelessWidget {
 }
 ```
 
-> ✨ Codul este disponibil pe dart-pad sa urmariti impreuna cu mine [aici](https://dartpad.dev/?id=0fffd97db6b90e0fe6e5e986f935c2d6)
+> ✨ Codul este disponibil pe dart-pad să urmăriți împreună cu mine [aici](https://dartpad.dev/?id=0fffd97db6b90e0fe6e5e986f935c2d6)
 
-Observam aici un steag care ni se pare cunoscut. Un container este defapt un widget care are mai multe functionalitati care se regasesc si in alte widget-uri. De exemplu, width si height se gasesc si in `SizedBox()`, dar color nu.
+Observăm aici un steag care ni se pare cunoscut. Un container este de fapt un widget care are mai multe funcționalități care se regăsesc și în alte widget-uri. De exemplu, `width` și `height` se găsesc și în `SizedBox()`, dar `color` nu.
 
-Daca setam diferite valori pentru width, putem sa variem lucrurile.
+Dacă setăm diferite valori pentru `width`, putem să variem lucrurile.
 
-Fiecare container poate sa aiba inautru lui alte widget-uri, trebuie doar sa specificam care mai exact:
+Fiecare container poate să aibă în interiorul lui alte widget-uri, trebuie doar să specificăm care mai exact:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -309,9 +310,9 @@ class App extends StatelessWidget {
 }
 ```
 
-Un container are si proprietatile de `margin` si `padding` care pot fi specificate cu un obiect de tip `EdgeInsets`. Care este diferenta dintre margin si padding? Pai spatierea de margin se aplica inafara containerului, in timp ce cea de padding se aplica inauntru containerului (practic se aplica pe copilul containerului.)
+Un container are și proprietățile `margin` și `padding` care pot fi specificate cu un obiect de tip `EdgeInsets`. Care este diferența dintre margin și padding? Pai spatierea de margin se aplică în afara containerului, în timp ce cea de padding se aplică înăuntru containerului (practic se aplică pe copilul containerului).
 
-Dar daca am dori sa sugeram utilizatorului ca un obiect este "deasupra" altui obiect? In aceste cazuri ne folosim de widget-ul `Card()` care va aplica o umbra asupra copilului sau, practic ridicandul vizual dintre celelalte:
+Dar dacă am dori să sugerăm utilizatorului că un obiect este "deasupra" altui obiect? În aceste cazuri ne folosim de widget-ul `Card()` care va aplica o umbră asupra copilului sau, practic ridicându-l vizual dintre celelalte:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -361,7 +362,7 @@ class App extends StatelessWidget {
 }
 ```
 
-Ca sa schimbam cat de "deasupra" este obiectul, putem sa modificam optiunea de `elevation`. Observam ca din cauza margini containerului, avem un spatiu alb liber. Haide-ti sa scoatem marginea de pe container.
+Ca să schimbăm cât de "deasupra" este obiectul, putem să modificăm opțiunea de `elevation`. Observăm că din cauza marginii containerului, avem un spațiu alb liber. Haideți să scoatem marginea de pe container.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -413,9 +414,9 @@ class App extends StatelessWidget {
 
 ## Expanded
 
-Expanded este un widget extrem de folositor cand vrem sa ne jucam mai in detaliu cu dispunerea widget-urilor. Cand inconjuram un widget in `Expanded()` ii spunem defapt sa incerce sa ocupe tot spatiul pana nu mai poate. 
+`Expanded()` este un widget extrem de folositor când vrem să ne jucăm mai în detaliu cu dispunerea widget-urilor. Când înconjurăm un widget în `Expanded()`, îi spunem de fapt să încerce să ocupe tot spațiul până nu mai poate.
 
-Un expanded este foarte similar cu un spacer, ba chiar daca un expanded nu are un `child` specificat, se comporta **exact** ca `Spacer()`.
+Un `Expanded()` este foarte similar cu un `Spacer`, ba chiar dacă un `Expanded` nu are un `child` specificat, se comportă **exact** ca `Spacer()`.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -467,9 +468,9 @@ class App extends StatelessWidget {
 }
 ```
 
-> 🔥 **Important!** - Expanded se poate folosi doar inauntru la `Column()` si `Row()`.
+> 🔥 **Important!** - `Expanded` se poate folosi doar înăuntru la `Column()` și `Row()`.
 
-Dar intrebarea este ce se intampla daca punem toate widget-urile in expanded?
+Dar întrebarea este ce se întâmplă dacă punem toate widget-urile în `Expanded`?
 
 ```dart
 import 'package:flutter/material.dart';
@@ -525,9 +526,9 @@ class App extends StatelessWidget {
 }
 ```
 
-Pai, fiecare va incerca sa se extinda la fel de tare, si vor ocupa tot spatiul, impartind-ul in 3 parti egale.
+Pai, fiecare va încerca să se extindă la fel de tare și vor ocupa tot spațiul, împărțindu-l în 3 părți egale.
 
-Bun, dar daca de exemplu, transilvania e mai tare decat celelalte doua regate, si am vrea sa ocupe mai mult spatiu in steag. Expanded are o proprietate numita: `flex`, care nespecificata este initializata la 1. Acest flex semnifica partea din spatiul total pe care o poate ocupa. Deci daca am pune un flex de 3 in expanded-ul translivaniei, atunci transilvania ar ocupa 3 din 5 parti din spatiu (unde celelalte doua regate ocupa impreuna 2/5).
+Dar, dacă de exemplu, Transilvania e mai importantă decât celelalte două regate, și am vrea să ocupe mai mult spațiu în steag. `Expanded` are o proprietate numită: `flex`, care, nespecificată, este inițializată la 1. Acest flex semnifică partea din spațiul total pe care o poate ocupa. Deci, dacă am pune un flex de 3 în `Expanded`-ul Transilvaniei, atunci Transilvania ar ocupa 3 din 5 părți din spațiu (unde celelalte două regate ocupă împreună 2/5).
 
 ```dart
 
@@ -585,7 +586,91 @@ class App extends StatelessWidget {
 }
 ```
 
-Desigur, daca am vrea ca moldova sa aiba un flex de 2, atunci ea ar fi mai mare decat valahia, dar mai mica ca transilvania. Totalul de spatiu este mereu fiecare flex adunat, caz in care ar veni 2 + 1 + 3 = 6, deci transilvania ar ocupa 3 sesimi, moldova 2 sesimi, si valahia 1 sesime din spatiul total.
+Desigur, dacă am vrea ca Moldova să aibă un flex de 2, atunci ea ar fi mai mare decât Valahia, dar mai mică decât Transilvania. Totalul de spațiu este mereu fiecare flex adunat, caz în care ar veni 2 + 1 + 3 = 6, deci Transilvania ar ocupa 3 șesimi, Moldova 2 șesimi, și Valahia 1 șesime din spațiul total.
 
-Observati cat de puternic este acest mecanism ca sa specificam orice fel de aliniere si dispunere de care avem nevoie.
+Observați cât de puternic este acest mecanism pentru a specifica orice fel de aliniere și dispunere de care avem nevoie.
 
+## ListView și prietenii
+
+Daca se poate spune un lucru despre aplicatiile mobile este urmatorul:
+
+> "In general, majoritatea aplicațiilor mobile pot fi reduse la o listă de chestii"
+
+Hai sa luam cateva exemple bune:
+
+- Instagram: o listă de postări
+- Tiktok: o listă de videoclipuri
+- Youtube: o listă de videoclipuri. Dai click pe videoclip ai o lista de recomandari si o lista de comentarii
+- Spotify: o listă de cantece
+
+Si putem sa continuam tot asa. Lista de contacte, lista de mancare de comandat etc... Exemplele sunt nelimitate.
+
+De aceea, baietii destepti care au facut flutter au vazut ca este nevoie de un widget special care sa reprezinte o lista asa ca au inventat `ListView()`.
+
+Haideti sa luam codul initial, si sa folosim un `ListView()` in loc de un `Column()`:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: ListView(
+          children: [
+            Text('Title'),
+            Text('Subtitle'),
+            Text('Content content content content'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+Observam ca si listview are copii si ca pana acum se comporta exact ca si coloana. Exista totusi o diferenta. Hai sa rulam urmatorul cod:
+
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: ListView(
+          children: [
+            for (int i in List.generate(100, (index) => index))
+              Text("Element is the $i'th in a list"),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+Ce am facut aici este ca am generat folosind un for intr-o lista 100 de elemente de tip int care sunt numere crescatoare de la 0 pana la 99. Observam ca toate aceste elemente ne ies de pe ecran. Cand ele sunt plasate intr-o coloana, acea coloana va arunca o eroare si se va plange ca nu are destul loc ca sa isi afiseze copii, in timp ce `ListView()`-ul e based and scroll-pilled. Daca ii dai prea multe elemente el zice: no, uite ca poti sa dai scroll prin ele si nu se plange ca nu are loc.
+
+Insa, la fel ca si coloana, list-view-ul se va extinde pana cand nu mai poate, deci daca bagam un list-view intr-o coloana, flutter va plange lacrimi amare pentru ca nu va cum sa afiseze asa ceva pe ecran si iti va da o eroare.
+
+Pe langa faptul ca poate sa aiba mai multe elemente in el, sub capota, `ListView()` este mult mai optimizat pentru liste colosale, deci si daca aveti 1000 de elemente, acest widget se va descurca fara sa ne faca prea mult lag. In schimb, column ar ceda mult mai repede si FPS-urile aplicatiei noastre ar cadea dramatic.
+
+### ListTile
+
+ListTile este un widget care a fost creeat sa arate bine intr-un listview. El ar putea sa fie numit un element intr-o lista si vine preconfigurat cu padding, separator si cu diverse optiuni ca sa ne dea voie sa 
