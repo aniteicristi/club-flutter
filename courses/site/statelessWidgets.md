@@ -591,23 +591,22 @@ Desigur, dacă am vrea ca Moldova să aibă un flex de 2, atunci ea ar fi mai ma
 Observați cât de puternic este acest mecanism pentru a specifica orice fel de aliniere și dispunere de care avem nevoie.
 
 ## ListView și prietenii
+Dacă se poate spune un lucru despre aplicațiile mobile este următorul:
 
-Daca se poate spune un lucru despre aplicatiile mobile este urmatorul:
+> "În general, majoritatea aplicațiilor mobile pot fi reduse la o listă de chestii."
 
-> "In general, majoritatea aplicațiilor mobile pot fi reduse la o listă de chestii"
-
-Hai sa luam cateva exemple bune:
+Hai să luăm câteva exemple bune:
 
 - Instagram: o listă de postări
-- Tiktok: o listă de videoclipuri
-- Youtube: o listă de videoclipuri. Dai click pe videoclip ai o lista de recomandari si o lista de comentarii
-- Spotify: o listă de cantece
+- TikTok: o listă de videoclipuri
+- YouTube: o listă de videoclipuri. Dai click pe un videoclip ai o listă de recomandări și o listă de comentarii.
+- Spotify: o listă de cântece
 
-Si putem sa continuam tot asa. Lista de contacte, lista de mancare de comandat etc... Exemplele sunt nelimitate.
+Și putem să continuăm tot așa. Lista de contacte, lista de mâncare de comandat, etc... Exemplele sunt nelimitate.
 
-De aceea, baietii destepti care au facut flutter au vazut ca este nevoie de un widget special care sa reprezinte o lista asa ca au inventat `ListView()`.
+De aceea, cei deștepți care au creat Flutter au văzut că este nevoie de un widget special care să reprezinte o listă, așa că au inventat `ListView()`.
 
-Haideti sa luam codul initial, si sa folosim un `ListView()` in loc de un `Column()`:
+Hai să luăm codul inițial și să folosim un `ListView()` în loc de un `Column()`:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -636,8 +635,7 @@ class App extends StatelessWidget {
 }
 
 ```
-
-Observam ca si listview are copii si ca pana acum se comporta exact ca si coloana. Exista totusi o diferenta. Hai sa rulam urmatorul cod:
+Observăm că și `ListView` are copii și că până acum se comportă exact ca și `Column`. Există totuși o diferență. Hai să rulăm următorul cod:
 
 
 ```dart
@@ -665,11 +663,11 @@ class App extends StatelessWidget {
   }
 }
 ```
-Ce am facut aici este ca am generat folosind un for intr-o lista 100 de elemente de tip int care sunt numere crescatoare de la 0 pana la 99. Observam ca toate aceste elemente ne ies de pe ecran. Cand ele sunt plasate intr-o coloana, acea coloana va arunca o eroare si se va plange ca nu are destul loc ca sa isi afiseze copii, in timp ce `ListView()`-ul e based and scroll-pilled. Daca ii dai prea multe elemente el zice: no, uite ca poti sa dai scroll prin ele si nu se plange ca nu are loc.
+Ce am făcut aici este că am generat 100 de widget-uri `Text()` folosind un for într-o listă generată 100 de elemente de tip întreg care sunt numere crescătoare de la 0 până la 99. Observăm că toate aceste elemente ne ies de pe ecran. Când ele sunt plasate într-o coloană, acea coloană va arunca o eroare și se va plânge că nu are destul loc ca să-și afișeze copii, în timp ce ListView()-ul e based and scroll-pilled. Dacă îi dai prea multe elemente, el zice: no, uite că poți să dai scroll prin ele și nu se plânge că nu are loc.
 
-Insa, la fel ca si coloana, list-view-ul se va extinde pana cand nu mai poate, deci daca bagam un list-view intr-o coloana, flutter va plange lacrimi amare pentru ca nu va cum sa afiseze asa ceva pe ecran si iti va da o eroare.
+Însă, la fel ca și coloana, list-view-ul se va extinde până când nu mai poate, deci dacă bagăm un list-view într-o coloană, Flutter va plânge lacrimi amare pentru că nu va cum să afișeze așa ceva pe ecran și îți va da o eroare.
 
-Pe langa faptul ca poate sa aiba mai multe elemente in el, sub capota, `ListView()` este mult mai optimizat pentru liste colosale, deci si daca aveti 1000 de elemente, acest widget se va descurca fara sa ne faca prea mult lag. In schimb, column ar ceda mult mai repede si FPS-urile aplicatiei noastre ar cadea dramatic.
+Pe lângă faptul că poate să aibă mai multe elemente în el, sub capotă, ListView() este mult mai optimizat pentru liste colosale, deci și dacă aveți 1000 de elemente, acest widget se va descurca fără să ne facă prea mult lag. În schimb, coloana ar ceda mult mai repede și FPS-urile aplicației noastre ar scădea dramatic.
 
 ### ListTile
 
