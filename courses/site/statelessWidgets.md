@@ -663,7 +663,9 @@ class App extends StatelessWidget {
   }
 }
 ```
-Ce am făcut aici este că am generat 100 de widget-uri `Text()` folosind un for într-o listă generată 100 de elemente de tip întreg care sunt numere crescătoare de la 0 până la 99. Observăm că toate aceste elemente ne ies de pe ecran. Când ele sunt plasate într-o coloană, acea coloană va arunca o eroare și se va plânge că nu are destul loc ca să-și afișeze copii, în timp ce ListView()-ul e based and scroll-pilled. Dacă îi dai prea multe elemente, el zice: no, uite că poți să dai scroll prin ele și nu se plânge că nu are loc.
+> ✨ Codul este disponibil pe dart-pad să urmăriți împreună cu mine [aici](https://dartpad.dev/?id=0fffd97db6b90e0fe6e5e986f935c2d6)
+
+Ce am făcut aici este că am generat 100 de widget-uri `Text()` folosind un for într-o listă generată 100 de elemente de tip întreg care sunt numere crescătoare de la 0 până la 99. Observăm că toate aceste elemente ne ies de pe ecran. Când ele sunt plasate într-o coloană, acea coloană va arunca o eroare și se va plânge că nu are destul loc ca să-și afișeze copii, în timp ce ListView()-ul e based and scroll-pilled. Dacă îi dai prea multe elemente, el zice: "no, uite că poți să dai scroll prin ele" și nu se plânge că nu are loc.
 
 Însă, la fel ca și coloana, list-view-ul se va extinde până când nu mai poate, deci dacă bagăm un list-view într-o coloană, Flutter va plânge lacrimi amare pentru că nu va cum să afișeze așa ceva pe ecran și îți va da o eroare.
 
@@ -671,4 +673,76 @@ Pe lângă faptul că poate să aibă mai multe elemente în el, sub capotă, Li
 
 ### ListTile
 
-ListTile este un widget care a fost creeat sa arate bine intr-un listview. El ar putea sa fie numit un element intr-o lista si vine preconfigurat cu padding, separator si cu diverse optiuni ca sa ne dea voie sa 
+ListTile este un widget care a fost creeat sa arate bine intr-un listview. El ar putea sa fie numit un element intr-o lista si vine preconfigurat cu padding, separator si cu diverse optiuni ca sa ne dea voie sa ne configuram continutul liste frumos si placut. List Tile ar putea fi considerat un layout widget, dar el ofera un aspect specific. Este folositor atunci cand vrem sa avem elemente intr-o lista, si aceste elemente sa fie fie spatiate, sa aiba ceva in fata si in spate, sa ai un titlu si poate un subtitlu. `ListTile()` iti ofera toate acestea:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: ListView(
+          children: [
+            for (int i in List.generate(100, (index) => index))
+              ListTile(
+                title: Text("Element is the $i'th in a list"),
+                subtitle: Text("Subheading number $i"),
+                leading: Icon(Icons.circle),
+                trailing: Icon(Icons.square),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+`ListTile()` poate fi conceptualizat prin imaginea urmatoare.
+
+![!tile](./img/listTile.png)
+
+Observam ca avem un titlu care este pus intre doua elemente leading si trailing. Sub titlu este un subtitlu si exista padding peste tot. Partea cea mai faina este ca nu este neaparat ca titlul sau subtitlul sa fie doar text, sau leading si trailing sa fie iconite. `ListTile()` cere sa fie doar widget-uri, deci noi am putea sa punem orice in acele "slot"-uri.
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: ListView(
+          children: [
+            for (int i in List.generate(100, (index) => index))
+              ListTile(
+                title: Text("Element is the $i'th in a list"),
+                subtitle: Row(
+                  children: [
+                    Icon(Icons.add),
+                    Icon(Icons.close),
+                    Icon(Icons.circle)
+                  ]
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
