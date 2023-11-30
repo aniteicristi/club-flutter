@@ -1,4 +1,5 @@
 * [Acasa](/)
+* [Instalare Flutter](/install.md)
 * ***Cursuri***
 * [Administrativ](/administrativ.md)
 * [1. Introducere](/introducere.md)
