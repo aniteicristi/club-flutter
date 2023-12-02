@@ -4,7 +4,7 @@
 
 - **Ora:** 16:30
 - **Ziua:** În fiecare joi
-- **Locația:** Liceul Teoretic "Lucian Blaga", Laboratorul de informatică "Istorie", Etajul 3, capăt.
+- **Locația:** Liceul Teoretic "Lucian Blaga", Laboratorul de informatică de la etajul 2.
 
 ## De ce suntem aici?
 
@@ -53,26 +53,26 @@ Aici e programul momentan
 |   DATA    | COURSE TOPICS                  |
 |-----------|--------------------------------|
 |28.09.2023 | Administrativ + Introducere    |
-| LIBER     | Ziua educației :(              |
+| LIBER     | Ziua educației                 |
 |12.10.2023 | Dart I                         |
-|19.10.2023 | Dart II + OOP                  |
-|26.10.2023 | Stateless Widgets              |
-|VACANTA    | ----                           |
-|9.11.2023  | Stateful Widgets               |
-|16.11.2023 | Git basics + Instalare Flutter |
-|23.11.2023 | Create your first Flutter Project |
-|30.11.2023 | Navigare                       |
-|7.12.2023  | Sedinta Speciala               |
-|14.12.2023 | Stiluri I                      |
-|21.12.2023 | Stiluri II                     |
-|VACANTA    | ----                           |
-|VACANTA    | ----                           |
-|11.01.2024 | Sedinta Speciala               |
+|19.10.2023 | OOP                            |
+| LIBER     | Saptamana Altfel               |
+| VACANTA   | ----                           |
+|9.11.2023  | Stateless Widgets              |
+|16.11.2023 | Stateful Widgets               |
+|23.11.2023 | Instalare Flutter              |
+| LIBER     | Sf. Andrei                     |
+|7.12.2023  | Create your first Flutter Project|
+|14.12.2023 | Navigare                       |
+|21.12.2023 | Stiluri I                      |
+| VACANTA   | ----                           |
+| VACANTA   | ----                           |
+|11.01.2024 | Stiluri II                     |
 |18.01.2024 | Business Logic I               |
 |25.01.2024 | Business Logic II              |
 |1.02.2024  | Sedinta Speciala               |
 |8.02.2024  | Asynchronous Programming       |
-|VACANTA (?)| ----                           |
+| VACANTA(?)| ----                           |
 |22.02.2024 | Persistare pe Device           |
 |29.02.2024 | Web Requests I                 |
 |7.03.2024  | Web Requests II                |
