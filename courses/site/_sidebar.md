@@ -10,3 +10,4 @@
 * [6. Git](/git.md)
 * ***Exerciții***
 * [1. Cățel pe mobile](./exercitii/images.md)
+* [2. Tinder pentru pisici](./exercitii/cat_tinder.md)
