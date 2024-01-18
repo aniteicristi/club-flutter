@@ -12,3 +12,4 @@
 * [1. Cățel pe mobile](./exercitii/images.md)
 * [2. Tinder pentru pisici](./exercitii/cat_tinder.md)
 * [3. Formular de login](./exercitii/login_form.md)
+* [4. Text Urât](./exercitii/ugly_text.md)

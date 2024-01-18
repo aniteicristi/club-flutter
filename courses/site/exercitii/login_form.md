@@ -38,8 +38,27 @@ Pe langa asta, vom observa ca exista si un padding intre marginea ecranului si e
 
 ?> 💡 Ca să exersăm comenzile din Visual Studio Code, mergem si punem cursorul pe `Column()` si apasam ctrl+shift+R. La optiuni, ar trebui sa ne apara "Wrap with Padding".
 
+
+?> 💡BONUS: Putem sa specificam un atribut pe `TextField()`-ul de password ca sa ii ascundem conținutul. Acela este `obscureText`.
+
 ## Pagina de Register
 
 ![!login](../img/simple_register_page.png ':size=300x700')
 
 Pagina de register este foarte similara cu cea de login. Va descurca-ti aici si fara explicatii. Mi s-a facut lene de scris 😴
+
+## Adaugam logica in Login
+
+Veti observa in in pagina de login exista doua `TextEditingControllers()` numite email si password, precum si un `String? error` care reprezinta un mesaj de eroare.
+
+In momentul in care utilizatorul apasa pe butonul de login, se va apela functia din clasa `AuthenticationService` definita in folderul `lib/services`: `AuthenticationService.instance.login()`.
+
+Aceasta functie va primi doi parametrii fara nume: `email` si `password` si va verifica daca email-ul este egal cu `"test@gmail.com"` si daca parola e egala cu `"password"`. 
+
+Aceasta functie intoarce un `String?`. Adica poate sa fie ori un string ori null. Daca este null, inseamna ca ne-am autentificat cu succes. Daca nu este null, atunci trebuie sa afisam eroarea in interfata, precum in poza de mai jos:
+
+![!login](../img/invalid_password.png ':size=300x700')
+
+Vom face acest lucru prin a seta membrul error din clasa la valoarea pe care o intoarce functia de login si vom da refresh la interfata folosind functia mult pomenita: `setState(() {})`.
+
+Parametrii email si password trebuie sa fie preluati din acei `TextEditingController()`'s, deci vom pasa la `TextField()`-urile noastre controllerul corect prin atributul de `controller` al textfield-ului.
