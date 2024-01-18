@@ -72,7 +72,7 @@ In acel obiect putem sa specificam urmatoarele:
 
 - Culoarea prin atributul `color`, care poate lua orice culoare din `Colors`.
 - Cat de rotunde ii sunt colturile, prin atributul `borderRadius`. 
-  - Valorile pot fi specificate pentru fiecare colt a containerului, sau pentru toate folosind: `BorderRadius.all(radius)` unde radius este un numar real.
+  - Valorile pot fi specificate pentru fiecare colt a containerului, sau pentru toate folosind: `BorderRadius.circular(radius)` unde radius este un numar real.
 - Putem stiliza bordura containerului daca ii atribuim la `BoxDecoration` in atributul `border` un obiect de tip `Border.all()`.
   - In acel obiect `Border.all()` putem specifica `width`-ul bordurii, dar și culoarea prin `color`.
   - `Border.all` inseamna ca vrem sa specificam acelasi stil pentru fiecare bordura a container-ului. Noi putem sa stilizam fiecare bordura diferit (cea de sus, cea de jos, cea din stanga si cea din dreapta) la fel cum folosim si `EdgeInsets.all()`. Pentru a stiliza fiecare bordura individual, folosim doar `Border()`.
@@ -84,7 +84,7 @@ Container(
   height: 100,
   decoration: BoxDecoration(
     color: Colors.yellow,
-    borderRadius: BorderRadius.all(30),
+    borderRadius: BorderRadius.circular(30),
     border: Border.all(
       width: 30,
       color: Colors.blue,
