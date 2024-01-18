@@ -61,7 +61,7 @@ Tot ce trebuie sa facem pentru a folosi acele font-uri este a atribui la atribut
 ```dart
 Text(
   'haha',
-   style: GoogleFonts.roboto,
+   style: GoogleFonts.roboto(),
 )
 ```
 ## Containere
