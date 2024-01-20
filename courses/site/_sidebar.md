@@ -8,6 +8,7 @@
 * [4. Stateless Widgets](/statelessWidgets.md)
 * [5. Stateful Widgets](/statefulWidgets.md)
 * [6. Git](/git.md)
+* [7. Stiluri](/styles1.md)
 * ***Exerciții***
 * [1. Cățel pe mobile](./exercitii/images.md)
 * [2. Tinder pentru pisici](./exercitii/cat_tinder.md)
