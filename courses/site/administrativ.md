@@ -62,23 +62,15 @@ Aici e programul momentan
 |16.11.2023 | Stateful Widgets               |
 |23.11.2023 | Instalare Flutter              |
 | LIBER     | Sf. Andrei                     |
-|7.12.2023  | Create your first Flutter Project|
-|14.12.2023 | Navigare                       |
-|21.12.2023 | Stiluri I                      |
+|7.12.2023  | Setup proiect                  |
+|14.12.2023 | Probleme / Exercitii           |
+|21.12.2023 | Probleme / Exercitii           |
 | VACANTA   | ----                           |
 | VACANTA   | ----                           |
-|11.01.2024 | Stiluri II                     |
-|18.01.2024 | Business Logic I               |
-|25.01.2024 | Business Logic II              |
-|1.02.2024  | Sedinta Speciala               |
-|8.02.2024  | Asynchronous Programming       |
+|11.01.2024 |  Probleme / Exercitii          |
+|18.01.2024 | Stiluri I                      |
+|25.01.2024 | Navigare                       |
+|1.02.2024  | Cum să îți faci CV-ul          |
+|8.02.2024  | Proiect                        |
 | VACANTA(?)| ----                           |
-|22.02.2024 | Persistare pe Device           |
-|29.02.2024 | Web Requests I                 |
-|7.03.2024  | Web Requests II                |
-|14.03.2024 | Animatii                       |
-|21.03.2024 | BLoC I                         |
-|28.03.2024 | BLoC II                        |
-|4.04.2024  | BLoC III                       |
-|11.04.2024 | Sedinta Speciala               |
-|18.04.2024 | Sedinta Speciala               |
+|22.02.2024 | Proiect                        |
