@@ -1,5 +1,7 @@
 # Cat Tinder
 
+![!cat_tinder](../img/cat_tinder_cute.webp)
+
 Trebuie sa creati mai multe widget-uri si dupa sa le folositi pentru a scrie o pagina a unei aplicatii. La final, trebuie sa arate in felul urmator:
 
 ![!app](../img/app_1.jpeg)

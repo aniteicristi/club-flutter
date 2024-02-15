@@ -1,5 +1,7 @@
 # Formular de login
 
+![!login](../img/login.webp)
+
 In majoritatea aplicatiilor, inainte de a accesa continut/functionalitati, trebuie sa ne inregistram si autentificam cu serverul nostru. In viitoare cursuri, vom putea vedea cum sa facem acest lucru, dar pana atunci, haideti sa codam interfata a unei pagini de login si o pagina de inregistrare.
 
 Pentru a incepe, haide-ti sa ne clonam proiectul. Selectati folderul cu proiectele voastre si deschideti cmd (puteti tasta cmd in bara de sus).

@@ -9,8 +9,10 @@
 * [5. Stateful Widgets](/statefulWidgets.md)
 * [6. Git](/git.md)
 * [7. Stiluri](/styles1.md)
+* [8. Navigare](/navigation.md)
 * ***Exerciții***
 * [1. Cățel pe mobile](./exercitii/images.md)
 * [2. Tinder pentru pisici](./exercitii/cat_tinder.md)
 * [3. Formular de login](./exercitii/login_form.md)
 * [4. Text Urât](./exercitii/ugly_text.md)
+* [5. Cat Navigator](./exercitii/cat_navigator.md)
